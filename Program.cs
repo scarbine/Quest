@@ -65,9 +65,23 @@ namespace Quest
             };
 
             // Loop through all the challenges and subject the Adventurer to them
+            Game();
+            void Game()
+            {
             foreach (Challenge challenge in challenges)
             {
                 challenge.RunChallenge(CurrentUser);
+            }
+            Console.WriteLine("Would you like to repeat the adventure? yes/no");
+            string userContinue = Console.ReadLine();
+            if (userContinue == "yes")
+            {
+                Game();
+            }
+            else
+            {
+                Console.WriteLine("See ya later alligator!");
+            }
             }
 
             // This code examines how Awesome the Adventurer is after completing the challenges
