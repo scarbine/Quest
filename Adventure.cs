@@ -24,7 +24,7 @@ namespace Quest
         {
             Name = name;
             Awesomeness = 50;
-            ColorfulRobe = Robe;
+            // ColorfulRobe = Robe;
             
             
         }
