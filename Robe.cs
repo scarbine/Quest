@@ -1,42 +1,62 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace Quest
+
+namespace Quest 
 {
-
-
-
-
-
-
-    public class Robe 
+    public class Robe
     {
-        public int Length {get; set;}
+       int Length = 7;
+      
+       List<string> Colors = new List<string>(){"white","red"};
        
-       
 
-        
-        public Robe (int length)
-        {
-            Length = length;
-        
-        }
-
-        
-
-        public class Colors
-        {
-            public string Color {get; set;}
-
-            public Colors(string color)
-            {
-                this.Color = color;
-            }
-        }
-
-    
     }
+}
+
+
+
+
+
+// namespace Quest
+// {
+
+
+
+
+
+
+//     public class Robe 
+//     {
+//         public int Length {get; set;}
+//         public List<Colors> Colors {get; set;}
+       
+       
+
+        
+//         public Robe (int length)
+//         {
+//             this.Length = length;
+//             this.Colors = new List<Colors>();
+        
+//         }
+
+
+//     }
+//         public class Colors
+//         {
+//             public string Color {get; set;}
+
+//             public Colors(string color)
+//             {
+//                 this.Color = color;
+//             }
+
+//             List<Colors> colors = new List<Colors>();
+//         }
 
     
 
 
-}
+// }
