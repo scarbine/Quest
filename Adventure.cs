@@ -13,6 +13,8 @@ namespace Quest
 
         public Robe ColorfulRobe { get; }
 
+        public Hat aHat {get;}
+
         public string Length { get; }
 
        
@@ -26,11 +28,13 @@ namespace Quest
 
 
         // A constructor to make a new Adventurer object with a given name
-        public Adventurer(string name, Robe robe)
+        public Adventurer(string name, Robe robe, Hat hat)
         {
             Name = name;
             Awesomeness = 50;
             ColorfulRobe = robe;
+            aHat = hat;
+
         }
 
         // Add a method to return the discription of the Adventurers Status
@@ -39,12 +43,13 @@ namespace Quest
         {
         Console.WriteLine($"Adventure {Name}");
            Console.WriteLine($"{a.Name} is {a.Awesomeness}xx awesome.");
+           Console.WriteLine($"Their hat is {a.aHat.ShininessDescription}");
            Console.WriteLine("They are dressed in these colors.");
            foreach(string Color in a.ColorfulRobe.Colors)
            {
                Console.WriteLine($"{Color}");
            } 
-           Console.WriteLine($"And the robe is {a.ColorfulRobe.Length}");
+           Console.WriteLine($"And the robe is {a.ColorfulRobe.Length} in long.");
         }
 
 
