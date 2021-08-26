@@ -107,10 +107,16 @@ namespace Quest
                 challenges.ElementAt(random).RunChallenge(CurrentUser);
             }
             Bling.ShowPrize(CurrentUser);
-            Console.WriteLine("Would you like to repeat the adventure? yes/no");
+            Console.WriteLine(@"Would you like to repeat the adventure?
+            1) yes
+            2) no
+            ");
             string userContinue = Console.ReadLine();
-            if (userContinue == "yes")
+            if (userContinue == "1")
             {
+                int repeatGameMultiplier = CurrentUser.numberOfCorrectAnswers * 10;
+                CurrentUser.Awesomeness += repeatGameMultiplier;
+                Console.WriteLine(CurrentUser.Awesomeness);
                 Game();
             }
             else
