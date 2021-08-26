@@ -27,6 +27,7 @@ namespace Quest
         // This method will take an Adventurer object and make that Adventurer perform the challenge
         public void RunChallenge(Adventurer adventurer)
         {
+            // adventurer.GetDescription(adventurer);
             Console.Write($"{_text}: ");
             string answer = Console.ReadLine();
 
@@ -50,16 +51,7 @@ namespace Quest
             // Note how we call an Adventurer object's method
             Console.WriteLine(adventurer.GetAdventurerStatus());
             Console.WriteLine();
-            // Console.WriteLine("Would you like to repeat the adventure? Y/N");
-            // string userContinue = Console.ReadLine();
-            // if (userContinue == "Y")
-            // {
-                
-            // }
-            // else
-            // {
-            //     Console.WriteLine("See ya later alligator!");
-            // }
+            
 
         }
     }
