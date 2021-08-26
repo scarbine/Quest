@@ -8,30 +8,35 @@ namespace Quest
     {
         public int ShininessLevel {get; set;}
 
-        public string ShininessDescription {get; set;}
+        public string ShininessDescription {
+            get
+            {
+              if (ShininessLevel < 2 )
+            {
+                return "dull";
+            }
+            else if (ShininessLevel >= 2 && ShininessLevel <= 5)
+            {
+                return "noticeable";
+            }
+            else if(ShininessLevel >= 6 && ShininessLevel <= 9)
+            {
+                return "bright";
+            }
+            else
+            {
+                return "blinding";
+            }  
+            }
+        }
         
         public Hat (int level)
         {
             ShininessLevel = level;
-            ShininessDescription = "dull"; 
+           
         }
         
-            // if (ShininessLevel < 2 )
-            // {
-            //     ShininessDescription = "dull";
-            // }
-            // if (ShininessLevel >= 2 || ShininessLevel <= 5)
-            // {
-            //     return "noticeable";
-            // }
-            // if(ShininessLevel >= 6 || ShininessLevel <= 9)
-            // {
-            //     return "btight";
-            // }
-            // if(ShininessLevel > 9)
-            // {
-            //     return "blinding";
-            // }
+            
         
 
     }

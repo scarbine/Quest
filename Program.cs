@@ -17,6 +17,7 @@ namespace Quest
             
 
             Robe Silky = new Robe();
+            Hat Blinding = new Hat(3);
 
 
             // Create a few challenges for our Adventurer's quest
@@ -55,9 +56,9 @@ namespace Quest
             int maxAwesomeness = 100;
 
             // Make a new "Adventurer" object using the "Adventurer" class
-            Adventurer theAdventurer = new Adventurer("Jack", Silky
+            Adventurer theAdventurer = new Adventurer("Jack", Silky, Blinding
             );
-            Adventurer CurrentUser = new Adventurer(userName, Silky);
+            Adventurer CurrentUser = new Adventurer(userName, Silky, Blinding);
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
