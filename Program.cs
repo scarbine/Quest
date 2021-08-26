@@ -18,6 +18,7 @@ namespace Quest
 
             Robe Silky = new Robe();
             Hat Blinding = new Hat(3);
+            Prize Bling = new Prize("Bling, Bling, Boom!");
 
 
             // Create a few challenges for our Adventurer's quest
@@ -80,6 +81,7 @@ namespace Quest
             {
                 challenge.RunChallenge(CurrentUser);
             }
+            Bling.ShowPrize(CurrentUser);
             Console.WriteLine("Would you like to repeat the adventure? yes/no");
             string userContinue = Console.ReadLine();
             if (userContinue == "yes")
