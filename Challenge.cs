@@ -41,11 +41,14 @@ namespace Quest
 
                 // Note how we access an Adventurer object's property
                 adventurer.Awesomeness += _awesomenessChange;
+                adventurer.numberOfCorrectAnswers++;
+                Console.WriteLine("Total correct answers" + " " + adventurer.numberOfCorrectAnswers);
             }
             else
             {
                 Console.WriteLine("You have failed the challenge, there will be consequences.");
                 adventurer.Awesomeness -= _awesomenessChange;
+                Console.WriteLine("Total correct answers" + " " + adventurer.numberOfCorrectAnswers);
             }
 
             // Note how we call an Adventurer object's method
