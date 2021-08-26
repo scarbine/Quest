@@ -29,6 +29,19 @@ namespace Quest
 
 
             Challenge twoPlusTwo = new Challenge("2 + 2?", 4, 10);
+            Challenge twoPlusThree = new Challenge("2 + 3?", 5, 10);
+            Challenge waterSymbol = new Challenge(@"What is the chemical formula for water
+            1) 2O2
+            2) HO2
+            3) H2O
+            4) HOH
+             ",3, 10);
+            Challenge bestBand = new Challenge(@"Who is the best band?
+            1) Incubus
+            2) Pearl Jam
+            3) Lord Huron
+            4) Mt Joy
+            ", 1, 10);
             Challenge theAnswer = new Challenge(
                 "What's the answer to life, the universe and everything?", 42, 25);
             Challenge whatSecond = new Challenge(
@@ -69,17 +82,29 @@ namespace Quest
                 theAnswer,
                 whatSecond,
                 guessRandom,
-                favoriteBeatle
+                favoriteBeatle,
+                twoPlusThree,
+                bestBand,
+                waterSymbol
             };
+
+            List<Challenge> randoQuestions = new List<Challenge>();
 
             // Loop through all the challenges and subject the Adventurer to them
             Game();
             void Game()
             {
                 CurrentUser.GetDescription(CurrentUser);
-            foreach (Challenge challenge in challenges)
+            // foreach (Challenge challenge in challenges)
+            // {
+            //     challenge.RunChallenge(CurrentUser);
+            // }
+
+            for (var i = 0; i < 5 ; i++)
             {
-                challenge.RunChallenge(CurrentUser);
+                int length = challenges.Count();
+                int random = new Random().Next(length); 
+                challenges.ElementAt(random).RunChallenge(CurrentUser);
             }
             Bling.ShowPrize(CurrentUser);
             Console.WriteLine("Would you like to repeat the adventure? yes/no");
