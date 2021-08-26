@@ -17,6 +17,8 @@ namespace Quest
 
         public string Length { get; }
 
+        public int numberOfCorrectAnswers {get; set;}
+
        
 
         // This is a mutable property it has a "get" and a "set"
@@ -34,6 +36,7 @@ namespace Quest
             Awesomeness = 50;
             ColorfulRobe = robe;
             aHat = hat;
+            numberOfCorrectAnswers = 0;
 
         }
 
