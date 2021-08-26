@@ -43,12 +43,12 @@ namespace Quest
             4) Mt Joy
             ", 1, 10);
             Challenge theAnswer = new Challenge(
-                "What's the answer to life, the universe and everything?", 42, 25);
+                "What's the answer to life, the universe and everything?", 42, 10);
             Challenge whatSecond = new Challenge(
-                "What is the current second?", DateTime.Now.Second, 50);
+                "What is the current second?", DateTime.Now.Second, 10);
 
             int randomNumber = new Random().Next() % 10;
-            Challenge guessRandom = new Challenge("What number am I thinking of?", randomNumber, 25);
+            Challenge guessRandom = new Challenge("What number am I thinking of?", randomNumber, 10);
 
             Challenge favoriteBeatle = new Challenge(
                 @"Who's your favorite Beatle?
@@ -57,7 +57,7 @@ namespace Quest
     3) George
     4) Ringo
 ",
-                4, 20
+                4, 10
             );
 
             // "Awesomeness" is like our Adventurer's current "score"
@@ -113,10 +113,12 @@ namespace Quest
             ");
             string userContinue = Console.ReadLine();
             if (userContinue == "1")
-            {
+            {   
+                // Console.WriteLine(CurrentUser.Awesomeness);
                 int repeatGameMultiplier = CurrentUser.numberOfCorrectAnswers * 10;
                 CurrentUser.Awesomeness += repeatGameMultiplier;
-                Console.WriteLine(CurrentUser.Awesomeness);
+                // Console.WriteLine(CurrentUser.Awesomeness);
+                // Console.WriteLine(repeatGameMultiplier);
                 Game();
             }
             else
